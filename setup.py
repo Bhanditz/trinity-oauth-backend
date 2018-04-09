@@ -10,7 +10,7 @@ from setuptools import setup
 
 def get_version(*file_paths):
     """
-    Extract the version string from the file at the given relative path fragments.
+    Extract the version string from the file at the given relative path.
     """
     filename = os.path.join(os.path.dirname(__file__), *file_paths)
     version_file = open(filename).read()
@@ -28,7 +28,8 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 setup(
     name='trinity-oauth-backend',
     version=VERSION,
-    description='An OAuth backend for Texas Gateway (Trinity), mostly used for Open edX but can be used elsewhere.',
+    description=('An OAuth backend for Texas Gateway (Trinity), '
+                 'mostly used for Open edX but can be used elsewhere.'),
     long_description=README,
     author='Omar Al-Ithawi',
     author_email='omar@appsembler.com',
